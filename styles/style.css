@@ -7,15 +7,15 @@
     padding: 92px 49px 96px 51px;
     align-items: center;
     margin: auto;
-    font-size: 18px;
+}
+
+.header__menu{
     font-style: normal;
     font-weight: 400;
     background-color: #fff;
     color: #000;
+    font-size: 18px;
 }
-
-/* .header__menu{   
-} зачем этот класс?*/
 
 .header__links_list{
     display: flex;
@@ -38,7 +38,8 @@
 }
 
  .header-logo {
-    size: 100%;
+    height: 100%;
+    width: 100%;
  }
 
 
@@ -53,7 +54,6 @@ address {
 
 .contact__info { 
     height: 100%;
-    text-align: left;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -73,13 +73,12 @@ address {
     background-position: center;
     background-size: cover;
     position: relative;
-    padding: 165px 50px 147px 50px;
 }
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px; 
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); 
@@ -87,9 +86,8 @@ address {
 }
 
 .cover__title {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: 215px 100px 100px;
+    display: flex;
+    flex-direction: column;
     font-family: Raleway;
     font-size: 100px;
     font-weight: 700;
@@ -101,30 +99,24 @@ address {
     color: #FFF;
     font-style: normal;
     row-gap: 20px;
-    justify-items: center;
-    align-items: center;
+    line-height: 115%;
+    padding: 165px 50px 135px 50px;
 }
 
 .aligned-text{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2; 
-   
+    justify-content: flex-start;
+    
 }
 
 .aligned-text_center{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .aligned-text_right{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .cover__description {
@@ -134,6 +126,7 @@ address {
     z-index: 3;
     justify-content: right;
     width: 100%;
+    align-items: center;
 }
 
 .cover__description-text {
@@ -282,19 +275,21 @@ address {
 }
 
 .about__logo-image{
-    background-image: url(../images/logo-white.svg);
     grid-column-start: 2;
     grid-column-end: 3;
     position: absolute;
     z-index: 0;
+    width: 148px;
+    height: 114px;
+    margin: 63px 46px;
 }
 
 .about__title{
     grid-column-start: 4;
     grid-column-end: 5;
     justify-items: start;
-    align-items: end;
-    margin: 101px 50px 100px 25px;
+    align-items: center;
+    margin: 101px 594px 100px 25px;
 }
 
 .about__text{
@@ -320,49 +315,34 @@ address {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    justify-content: left;
 }
 
 /*Стили подвала*/
 
 .footer {
-    width: 100%;
-    height: 97px;
-    max-width: 1340px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 256px;
-    margin: 180px 50px 90px 50px; 
-}
-
-.contact__info-footer {
-    text-align: left;
+    grid-template-rows: 1fr;
+    width: 100%;
     height: 100%;
-    text-align: left;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24.3px;
-    text-underline-position: under;
-    text-decoration-thickness: 1px;
+    max-width: 1340px;
+    margin-right: 50px; 
+    margin-bottom: 90px; 
+    margin-left: 50px;
+    justify-content: space-between;
+    justify-items: center;
 }
 
-.header__links_list_for_footer {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    justify-content: center; 
-}
-
-.header__links-list-item_no-bullit {
-    list-style-type: none; 
+.address-footer{
+    
 }
 
 .footer__social-list {
-    display: flex;
-    flex-direction: row;
-    /* width: 240px;
-    height: 28px; */
+    width: 240px;
+    height: 28px; 
     justify-content: space-between;
+    align-items: start;
 }
 
 .footer__social-list-item {
@@ -371,10 +351,10 @@ address {
 }
 
 
+
 /* TO DO:
 разобраться с размерами
 поправить текст во входной секции
-марджины в подзаголовке входной секции убрать и отцентрировать п/заголовок 
 наложение логотипа на черный круглый фон
 выравнивание текста в блоке Об аукционе
 выравнивание контента в подвале + размер иконок в подвале + как правильно реализовать межстрочный интервал в списке ссылок в подвале
