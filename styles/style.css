@@ -19,7 +19,6 @@
 
 .header__links_list {
     display: flex;
-    flex-direction: row;
     list-style: circle;
     gap: 32px;
     align-items: center;
@@ -42,7 +41,6 @@
     width: 100%;
  }
 
-
 .header__logo-image {
     width: 148px;
     height: 105px;
@@ -50,6 +48,7 @@
 
 address {
     display: inline-block;
+    text-align: left;
 }
 
 .contact__info { 
@@ -60,7 +59,6 @@ address {
     line-height: 24.3px;
     text-underline-position: under;
     text-decoration-thickness: 1px;
-    margin: 7px 0px 7px 355px;
 }  
 /* стили для входной секции */
 .cover {
@@ -98,6 +96,14 @@ address {
     row-gap: 20px;
     line-height: 115%;
     padding: 165px 50px 135px 50px;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0px;
+}
+
+.letter-spacing-extended {
+    letter-spacing: 60px;
 }
 
 .aligned-text {
@@ -311,33 +317,51 @@ address {
 }
 /*Стили подвала*/
 .footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    width: 100%;
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    margin: 0px 50px 90px 50px;
+}
+
+.address__footer {
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.contact__info__footer { 
     height: 100%;
-    max-width: 1340px;
-    margin-right: 50px; 
-    margin-bottom: 90px; 
-    margin-left: 50px;
-    justify-content: space-between;
-    justify-items: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.3px;
+    text-underline-position: under;
+    text-decoration-thickness: 1px;
 }
 
-.address-footer { 
+.for_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer__social-list {
-    width: 240px;
-    height: 28px; 
+.footer__social-list{
+    display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-end;
+}
+
+.footer__links-list-item_no-bullit {
+    list-style-type: none;
 }
 
 .footer__social-list-item {
     height: 48px;
     width: 50px;
 }
+
+
 
 
 
