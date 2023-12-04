@@ -9,7 +9,7 @@
     margin: auto;
 }
 
-.header__menu{
+.header__menu {
     font-style: normal;
     font-weight: 400;
     background-color: #fff;
@@ -17,14 +17,14 @@
     font-size: 18px;
 }
 
-.header__links_list{
+.header__links_list {
     display: flex;
     flex-direction: row;
     list-style: circle;
     gap: 32px;
     align-items: center;
     line-height: normal;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
 .header__links-list-item_no-bullit {
@@ -43,7 +43,7 @@
  }
 
 
-.header__logo-image{
+.header__logo-image {
     width: 148px;
     height: 105px;
 }
@@ -62,9 +62,7 @@ address {
     text-decoration-thickness: 1px;
     margin: 7px 0px 7px 355px;
 }  
-
 /* стили для входной секции */
-
 .cover {
     max-width: 1440px;
     height: 757px;
@@ -91,7 +89,6 @@ address {
     font-family: Raleway;
     font-size: 100px;
     font-weight: 700;
-    line-height: 100%;
     text-transform: uppercase;
     position: relative;
     z-index: 2;
@@ -103,18 +100,18 @@ address {
     padding: 165px 50px 135px 50px;
 }
 
-.aligned-text{
+.aligned-text {
     justify-content: flex-start;
     
 }
 
-.aligned-text_center{
+.aligned-text_center {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-.aligned-text_right{
+.aligned-text_right {
     display: flex;
     justify-content: flex-end;
 }
@@ -140,7 +137,7 @@ address {
     word-spacing: 18px; 
 }
 
-.bet-button{
+.bet-button {
     background-color: transparent;
     color: #FFF;
     font-family: Raleway;
@@ -152,11 +149,8 @@ address {
     margin-right: 50px;
     margin-left: 78px;
 }
-
 /*стили списка карточек*/
-
-.lots{
-    
+.lots {
     margin: 180px 50px;
 }
 
@@ -207,7 +201,7 @@ address {
     background-image: url(../images/card-lot-01.jpg);
 }
 
-.card_type_book{
+.card_type_book {
     background-image: url(../images/card-lot-02.jpg);
 }
 
@@ -230,7 +224,7 @@ address {
 
 }
 
-.card__text{
+.card__text {
     color: #FFF;
     font-family: Raleway; 
     font-size: 20px;
@@ -251,9 +245,7 @@ address {
     text-decoration-thickness: 1px;
     margin: 30px 198px 0px 40px;
 }
-
 /* Секция About */
-
 .about {
     min-width: 1340px;
     margin: 181px 50px; 
@@ -265,7 +257,7 @@ address {
     grid-template-rows: 240px;
 }
 
-.about__logo{
+.about__logo {
     background-color: #000;
     grid-column-start: 2;
     grid-column-end: 3; 
@@ -274,7 +266,7 @@ address {
     z-index: -2;
 }
 
-.about__logo-image{
+.about__logo-image {
     grid-column-start: 2;
     grid-column-end: 3;
     position: absolute;
@@ -284,7 +276,7 @@ address {
     margin: 63px 46px;
 }
 
-.about__title{
+.about__title {
     grid-column-start: 4;
     grid-column-end: 5;
     justify-items: start;
@@ -292,7 +284,7 @@ address {
     margin: 101px 594px 100px 25px;
 }
 
-.about__text{
+.about__text {
     grid-column-start: 4;
     grid-column-end: 5;
     justify-content: start;
@@ -310,16 +302,14 @@ address {
     text-transform: uppercase;
 }
 
-.about__text{
+.about__text {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     justify-content: left;
 }
-
 /*Стили подвала*/
-
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -334,7 +324,7 @@ address {
     justify-items: center;
 }
 
-.address-footer{
+.address-footer {
     
 }
 
