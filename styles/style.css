@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    height: 293px;;
+    height: 293px;
     max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 148px 1fr;
@@ -10,12 +10,12 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    background-color: antiquewhite;
+    background-color: #fff;
     color: #000;
 }
 
 /* .header__menu{   
-} */
+} зачем этот класс?*/
 
 .header__links_list{
     display: flex;
@@ -34,10 +34,13 @@
 .header__link{
     text-underline-position: under;
     text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
 }
 
-/* .header-logo {
-} */
+ .header-logo {
+    size: 100%;
+ }
+
 
 .header__logo-image{
     width: 148px;
@@ -45,16 +48,334 @@
 }
 
 address {
-    display: grid;
+    display: inline-block;
 }
 
-.contact__info {
-    justify-content: end;
+.contact__info { 
+    height: 100%;
+    text-align: left;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 12px;
+    line-height: 24.3px;
     text-underline-position: under;
-}   
+    text-decoration-thickness: 1px;
+    margin: 7px 0px 7px 355px;
+}  
+
+/* стили для входной секции */
+
+.cover {
+    max-width: 1440px;
+    height: 757px;
+    background-image: url(../images/cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 165px 50px 147px 50px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.cover__title {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 215px 100px 100px;
+    font-family: Raleway;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 30px;
+    color: #FFF;
+    font-style: normal;
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.aligned-text{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+   
+}
+
+.aligned-text_center{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.aligned-text_right{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.cover__description {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 3;
+    justify-content: right;
+    width: 100%;
+}
+
+.cover__description-text {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase; 
+    word-spacing: 18px; 
+}
+
+.bet-button{
+    background-color: transparent;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-style: groove;
+    border: 1px solid;
+    padding: 12px 32px;
+    margin-right: 50px;
+    margin-left: 78px;
+}
+
+/*стили списка карточек*/
+
+.lots{
+    
+    margin: 180px 50px;
+}
+
+.lots__heading {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0px 1179px 27px 40px; 
+}
+
+.lots__card-list {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.lots__card-list-item {
+    list-style: none;
+    width: 430px;
+    min-height: 450px;
+    flex-grow: 1;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding: 50px 40px 50px 40px;;
+}
+
+.card_type_film {
+    background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book{
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+    background-image: url(../images/card-lot-03.jpg);
+}
+    
+.card__title {
+    color:#FFF;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; 
+    text-decoration-line: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 1px;
+    text-transform: uppercase;
+    z-index: 2;
+
+}
+
+.card__text{
+    color: #FFF;
+    font-family: Raleway; 
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    z-index: 2;
+}
+
+.lots__look-more-link {
+    display: inline-block;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-underline-position: under;
+    text-transform: lowercase;
+    text-decoration-thickness: 1px;
+    margin: 30px 198px 0px 40px;
+}
+
+/* Секция About */
+
+.about {
+    min-width: 1340px;
+    margin: 181px 50px; 
+}
+
+.about__column {
+    display: grid;
+    grid-template-columns: 95px 240px 95px auto;
+    grid-template-rows: 240px;
+}
+
+.about__logo{
+    background-color: #000;
+    grid-column-start: 2;
+    grid-column-end: 3; 
+    border-radius: 50%;
+    position: relative;
+    z-index: -2;
+}
+
+.about__logo-image{
+    background-image: url(../images/logo-white.svg);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    position: absolute;
+    z-index: 0;
+}
+
+.about__title{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-items: start;
+    align-items: end;
+    margin: 101px 50px 100px 25px;
+}
+
+.about__text{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-content: start;
+}
+
+.about__text__margin {
+    margin-bottom: 25px;
+}
+
+.about__title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.about__text{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*Стили подвала*/
+
+.footer {
+    width: 100%;
+    height: 97px;
+    max-width: 1340px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 256px;
+    margin: 180px 50px 90px 50px; 
+}
+
+.contact__info-footer {
+    text-align: left;
+    height: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.3px;
+    text-underline-position: under;
+    text-decoration-thickness: 1px;
+}
+
+.header__links_list_for_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center; 
+}
+
+.header__links-list-item_no-bullit {
+    list-style-type: none; 
+}
+
+.footer__social-list {
+    display: flex;
+    flex-direction: row;
+    /* width: 240px;
+    height: 28px; */
+    justify-content: space-between;
+}
+
+.footer__social-list-item {
+    height: 48px;
+    width: 50px;
+}
 
 
+/* TO DO:
+разобраться с размерами
+поправить текст во входной секции
+марджины в подзаголовке входной секции убрать и отцентрировать п/заголовок 
+наложение логотипа на черный круглый фон
+выравнивание текста в блоке Об аукционе
+выравнивание контента в подвале + размер иконок в подвале + как правильно реализовать межстрочный интервал в списке ссылок в подвале
+подумать над переиспользованием стилей списка в шапке и в подвале*/
