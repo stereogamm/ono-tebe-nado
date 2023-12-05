@@ -46,20 +46,18 @@
     height: 105px;
 }
 
-address {
-    display: inline-block;
-    text-align: left;
+.address {
+    justify-self: end;
+    max-width: 240px;
 }
 
-.contact__info { 
-    height: 100%;
-    font-size: 18px;
+.address__style {
     font-style: normal;
-    font-weight: 400;
     line-height: 24.3px;
+    font-size: 18px;
     text-underline-position: under;
-    text-decoration-thickness: 1px;
-}  
+    font-weight: 400;
+}
 /* стили для входной секции */
 .cover {
     max-width: 1440px;
@@ -90,12 +88,11 @@ address {
     text-transform: uppercase;
     position: relative;
     z-index: 2;
-    letter-spacing: 30px;
     color: #FFF;
     font-style: normal;
     row-gap: 20px;
     line-height: 115%;
-    padding: 165px 50px 135px 50px;
+    padding: 165px 50px 105px 50px;
 }
 
 .no-letter-spacing {
@@ -106,9 +103,13 @@ address {
     letter-spacing: 60px;
 }
 
+.letter-spacing {
+    letter-spacing: 30px;
+}
+
 .aligned-text {
-    justify-content: flex-start;
-    
+    display: flex;
+    justify-content: flex-start; 
 }
 
 .aligned-text_center {
@@ -120,12 +121,13 @@ address {
 .aligned-text_right {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .cover__description {
     display: flex;
-    flex-direction: row;
     position: relative;
+    margin: auto;
     z-index: 3;
     justify-content: right;
     width: 100%;
@@ -316,59 +318,39 @@ address {
     justify-content: left;
 }
 /*Стили подвала*/
+
+
 .footer {
-    display: flex;
-    max-width: 100%;
-    justify-content: space-between;
-    margin: 0px 50px 90px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1440px;
+    margin: 0px 10px 90px 50px;
+    column-gap: 230px;
 }
 
-.address__footer {
-    display: flex;
-    justify-content: flex-start; 
-}
-
-.contact__info__footer { 
-    height: 100%;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24.3px;
-    text-underline-position: under;
-    text-decoration-thickness: 1px;
+.address_footer {
+    max-width: 240px;
+    justify-self: start;
 }
 
 .for_footer {
     display: flex;
     flex-direction: column;
-    gap: 2px;
     align-items: center;
-    justify-content: center;
-}
-
-.footer__social-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    gap: 0px;
 }
 
 .footer__links-list-item_no-bullit {
     list-style-type: none;
 }
 
-.footer__social-list-item {
-    height: 48px;
-    width: 50px;
+.footer__social-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
 }
 
-
-
-
-
-/* TO DO:
-разобраться с размерами
-поправить текст во входной секции
-наложение логотипа на черный круглый фон
-выравнивание текста в блоке Об аукционе
-выравнивание контента в подвале + размер иконок в подвале + как правильно реализовать межстрочный интервал в списке ссылок в подвале
-подумать над переиспользованием стилей списка в шапке и в подвале*/
+.footer__social-list-item {
+    max-height: 48px;
+    max-width: 50px;
+}
