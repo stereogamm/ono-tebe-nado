@@ -304,14 +304,12 @@
 .about__title {
   font-size: 40px;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
 }
 
 .about__text {
   font-size: 20px;
   font-weight: 400;
-  line-height: normal;
   justify-content: left;
 }
 
